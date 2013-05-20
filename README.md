@@ -23,24 +23,25 @@ Install Ruby 1.9.3
 
     ex) If you use Windows, I recomend "RubyInstaller"
 
-Install Gems
+Install some Gems
 
     gem install sinatra
     gem install activerecord
     gem install haml
     gem install sqlite3
 
-Run *stack_memos.rb*
+Run *stack_memos.rb* on Ruby
 
     COMMAND> cd <place_of_stack_memos.rb>
     COMMAND> ruby stack_memos.rb
 
-Access URL by web browser
+Access URL in your web browser
 
     http://localhost:4567/
 
     ex) default port of Ruby server is 4567.
 
+[link is here](http://localhost:4567/ "Stack memos")
 
 ## 3. Warning
 
