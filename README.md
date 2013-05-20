@@ -30,6 +30,17 @@ Install Gems
     gem install haml
     gem install sqlite3
 
+Run *stack_memos.rb*
+
+    COMMAND> cd <place_of_stack_memos.rb>
+    COMMAND> ruby stack_memos.rb
+
+Access URL by web browser
+
+    http://localhost:4567/
+
+    ex) default port of Ruby server is 4567.
+
 
 ## 3. Warning
 
