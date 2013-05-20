@@ -17,7 +17,7 @@ Ruby 1.9.3
 * SQLite3 driver
 
 
-## 2. How to Use
+## 2. Instruction (How to Use)
 
 Install Ruby 1.9.3
 
@@ -43,7 +43,7 @@ Access URL in your web browser
 
 [link is here](http://localhost:4567/ "Stack memos")
 
-## 3. Warning
+## 3. Notice
 
 I has been tested only on "Windows7(32bit) / Ruby 1.9.3 / FireFox 20.0.1".
 
