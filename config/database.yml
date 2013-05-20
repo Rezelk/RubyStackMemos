@@ -1,0 +1,11 @@
+development:
+    adapter: sqlite3
+    database: db/memo.sqlite3
+
+test:
+    adapter: sqlite3
+    database: db/memo.sqlite3
+
+product:
+    adapter: sqlite3
+    database: db/memo.sqlite3

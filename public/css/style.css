@@ -1,0 +1,201 @@
+/* 全要素のPaddingとMarginを解除 */
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+/* HTML/BODY */
+html, body {
+	height: 100%;
+}
+
+/* BODY */
+body {
+	font-family: Verdana, "ヒラギノ角ゴ Pro W3", "メイリオ", "ＭＳ Ｐゴシック", Osaka, sans-erif;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+/******************************************************************************/
+
+/* コンテナ */
+div#container {
+	width: 100%;
+	position: relative;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+}
+
+/******************************************************************************/
+
+/* ヘッダー */
+div#header {
+	margin-bottom: 10px;
+}
+div#header>h1 {
+	padding: 5px 10px 5px 10px;
+	background-color: rgb(14, 61, 109);
+	color: white;
+}
+
+/******************************************************************************/
+/* コンテンツ */
+div#contents {
+	padding-bottom: 25px;
+}
+/******************************************************************************/
+
+/* フッター */
+div#footer {
+	height: 25px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+div#footer>h1 {
+	padding: 3px 10px 3px 10px;
+	background-color: rgb(14, 61, 109);
+	color: white;
+	font-size: 1em;
+	text-align: right;
+}
+
+/******************************************************************************/
+
+/* フォームテーブル */
+div#contents table.memo-form {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: gray;
+	border-collapse: collapse;
+	word-break: break-all; /* IE5~ */
+}
+
+/* フォームテーブル：キャプション */
+div#contents table.memo-form caption {
+	text-align: left;
+}
+
+/* フォームテーブル：セル全般 */
+div#contents table.memo-form td {
+	border-width: 0px 1px 1px 0px;
+	border-style: solid;
+	border-color: gray;
+}
+
+/* フォームテーブル：各カラム */
+div#contents table.memo-form tbody td.col-caption {
+	padding: 2px 4px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+div#contents table.memo-form tbody td.col-form {
+	padding: 2px 4px;
+	font-size: 0.8em;
+}
+div#contents table.memo-form tbody td.col-control {
+	padding: 2px 4px;
+}
+
+/******************************************************************************/
+
+/* フォーム：タイトル */
+div#contents table.memo-form input.text-title {
+	width: 25em;
+	border-width: 1px;
+	border-style: dotted;
+	border-color: gray;
+	background-color: rgb(232, 243, 255);
+}
+/* フォーム：内容 */
+div#contents table.memo-form textarea.text-content {
+	width: 35em;
+	height: 8em;
+	border-width: 1px;
+	border-style: dotted;
+	border-color: gray;
+	background-color: rgb(232, 243, 255);
+}
+/* フォーム：タグ */
+div#contents table.memo-form input.text-tags {
+	width: 25em;
+	border-width: 1px;
+	border-style: dotted;
+	border-color: gray;
+	background-color: rgb(232, 243, 255);
+}
+/* フォーム：INSERTボタン */
+div#contents table.memo-form input.button-submit {
+}
+
+/******************************************************************************/
+
+/* メモテーブル */
+div#contents table.memos-table {
+	margin-left: 20px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: gray;
+	border-collapse: collapse;
+	word-break: break-all; /* IE5~ */
+}
+
+/* メモテーブル：キャプション */
+div#contents table.memos-table caption {
+	text-align: left;
+}
+
+/* メモテーブル：セル全般 */
+div#contents table.memos-table td {
+	border-width: 0px 1px 1px 0px;
+	border-style: solid;
+	border-color: gray;
+}
+
+/* メモテーブル：ヘッダーセル */
+div#contents table.memos-table thead td {
+	padding: 2px 4px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.8em;
+	background-color: rgb(14, 20, 48);
+	color: white;
+}
+
+/* メモテーブル：コンテンツセル */
+div#contents table.memos-table tbody td {
+	padding: 2px 4px;
+	font-size: 0.9em;
+}
+
+/* メモテーブル：各カラム */
+div#contents table.memos-table td.col-no {
+	width: 3em;
+	text-align: center;
+	font-size: 0.8em;
+}
+div#contents table.memos-table td.col-title {
+	width: 20%;
+}
+div#contents table.memos-table td.col-content {
+	width: 40%;
+	font-size: 0.9em;
+}
+div#contents table.memos-table td.col-tags {
+	width: 15%;
+	font-size: 0.8em;
+}
+div#contents table.memos-table td.col-datetime {
+	width: 12em;
+	text-align: center;
+	font-size: 0.8em;
+}
+div#contents table.memos-table td.col-select {
+	width: 3em;
+	text-align: center;
+	font-size: 0.8em;
+}

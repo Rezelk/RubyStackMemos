@@ -1,0 +1,70 @@
+!!! Strict
+%html
+	%head
+		%link{ :rel => "stylesheet", :type => "text/css", :href => "css/style.css" }
+		%title= @page_title
+	%body
+		#container
+			/ ヘッダー
+			#header
+				%h1= @page_title
+				
+			/ コンテンツ
+			#contents
+				
+				/ 更新フォーム
+				%table{ :class => "memo-form" }
+					%caption メモの追加
+					%form{ :action => "/insert", :method => "POST", :id => "insert" }
+						%tbody
+							%tr
+								%td{ :class => "col-caption" } タイトル
+								%td{ :class => "col-form" }
+									%input{ :name => "title", :type => "text", :class => "text-title" }
+							%tr
+								%td{ :class => "col-caption" } 内容
+								%td{ :class => "col-form" }
+									%textarea{ :name => "content", :class => "text-content" }
+							%tr
+								%td{ :class => "col-caption" } タグ
+								%td{ :class => "col-form" }
+									%input{ :name => "tags", :type => "text", :class => "text-tags" }
+									スペース区切りで複数指定
+							%tr
+								%td{ :class => "col-control", :colspan => "2" }
+									%input{ :name => "submit", :type => "submit", :value => "INSERT", :class => "button-submit" }
+				
+				#message
+					%span{ :class => "message"}= @message
+				
+				/ メモテーブル
+				%table{ :class => "memos-table" }
+					%caption メモ一覧
+					%form{ :action => "/delete", :method => "POST", :id => "delete" }
+						%thead
+							%tr
+								%td{ :class => "col-no" } No
+								%td{ :class => "col-title" } タイトル
+								%td{ :class => "col-content" } 内容
+								%td{ :class => "col-tags" } タグ
+								%td{ :class => "col-datetime" } 日付
+								%td{ :class => "col-select" } 選択
+						%tbody
+							- index = 1
+							- @memos.each do |memo|
+								%tr
+									%td{ :class => "col-no" }= index
+									%td{ :class => "col-title" }= memo.title
+									%td{ :class => "col-content" }= memo.content
+									%td{ :class => "col-tags" }= memo.tags
+									%td{ :class => "col-datetime" }= memo.date_time
+									%td{ :class => "col-select" }
+										%input{ :name => "selection[]", :type => "checkbox", :class => "check-select", :value => memo.date_time }
+								- index += + 1
+							%tr
+								%td{ :class => "col-control", :colspan => "6" }
+									%input{ :name => "submit", :type => "submit", :value => "DELETE SELECTION", :class => "button-submit" }
+			
+			/ フッター
+			#footer
+				%h1 Copyright 2013 Tatsyta TOMINO
